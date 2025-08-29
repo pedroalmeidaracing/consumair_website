@@ -22,7 +22,7 @@ header {
     border-bottom: #4B18A1 1.5px solid;
 }
 
-button {
+.button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -93,7 +93,7 @@ p {
     padding: 3px 3px;
     border-radius: 200px;
     position: relative;
-    right: 50px;
+    right: 100px;
 }
 
 .nav-menu li {

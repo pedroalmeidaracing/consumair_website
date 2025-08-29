@@ -71,6 +71,7 @@ p {
     max-width: 1920px;
     min-width: 1350px;
     margin: 0 auto;
+    position: relative;
 }
 
 #logo {
@@ -144,171 +145,96 @@ p {
     background-color: #B8A2DA;
 }
 
-
-
  /* Corpo SITE ---------------------------------------------------*/
 
 main {
     flex: 1;
-    padding: 150px 0;
+    padding: 60px 0;
 }
- /* sub menu --------------------------------------*/
-.sub_menu {
-    justify-content: center;
-    align-items: center;
+
+#deco_dir {
+    position: absolute;
+    top: 40px;
+    right: -285px;
+    width: 40%;
+    height: auto;
+    z-index: -1;
+}
+
+.main_grid {
     display: flex;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding: 3px 3px;
+    flex-direction: row;
     gap: 20px;
-}
-
-.sub_menu li {
-    display: inline-block;
-    padding: 2px;
-    text-align: center;
-}
-
-.sub_menu li+li {
-    padding-left: 20px;
-}
-
-.sub_menu li a {
-    color: #4B18A1;
-    text-decoration: none;
-    border-radius: 15px;
-    transition: background-color 0.2s ease;
-    padding: 7px 20px;
-    display: inline-block;
-    width: 120px;
-}
-
-.sub_menu li a:hover {
-    background-color: #B8A2DA;
-}
-
-.sub_menu li a:active {
-    background-color: #4B18A1;
-    color: white;
-}
-
- /* sub menu  FIM ---------------------------------------*/
-
-.product_grid {
-    display: flex;
-    flex-wrap: nowrap;
+    padding: 20px;
+    margin: 60px auto;
     align-items: flex-start;
-    gap: 100px;
-    margin: 40px 120px;
+    width: 80%;
+    background-color: #B8A2DA;
+    border-radius: 25px;
 }
 
-.product_image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border: #4B18A1 1px solid;
-    border-radius: 35px;
-    transition: transform 0.2s ease;
-    cursor: zoom-in;
-}
-
-.product_image:hover {
-    transform: scale(1.05);
-}
-
-.product_image a {
-    width: 100%;
-    height: auto;
-}
-
-.product_info {
-    text-align: left;
+.contact_text {
     flex: 1;
+    min-width: 300px;
+}
+
+.contact_text p {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 1.5;
+    padding: 30px;
+}
+
+.contact_form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* Ensures children align left */
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
 }
 
-#product_logo {
-    height: 60px;
-    text-align: left;
-    align-self: flex-start; /* Aligns the logo to the left of .product_info */
-    margin-bottom: 40px;
+.contact_form label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    color: #4B18A1;
+    font-size: 12px;
 }
 
-#product_drawing {
-    width: 20%;
-    height: auto;
-    margin: 30px 0 60px 0;
+.contact_form input,
+.contact_form textarea {
+    margin-top: 4px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #4B18A1;
+    padding: 10px;
+    font-size: 12px;
 }
 
-
-#download_bttn {
+.contact_form button {
     background-color: #4B18A1;
     color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 10px;
+    cursor: pointer;
     text-transform: uppercase;
-    text-decoration: none;
-    margin-top: 40px;
-    font-size: 13px;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
 }
 
-#download_bttn:hover {
-    background-color: #B8A2DA;
-}
-
-#caracteristicas {
-    width: 780px;
+#deco_esq {
+    position: absolute;
+    bottom: 0;
+    left: -285px;
+    width: 40%;
     height: auto;
-    margin: 10px 0 25px 0;
+    z-index: 1;
 }
-
-#produtos_bar {
-    display: flex;
-    gap: 40px; 
-    margin-top: 80px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: -65px;
-}
-
-#bar {
-    background-color: #4B18A1;
-    padding: 4px 34%;
-    font-size: 15px;
-    border-radius: 30px;
-    text-decoration: none;
-    cursor: default;
-}
-
-#produtos_bttn {
-    background-color: #4B18A1;
-    color: white;
-    padding: 7px 15px 7px 8px;
-    font-size: 15px;
-    border-radius: 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-transform: uppercase;
-}
-
-#produtos_bttn:hover {
-    background-color: #B8A2DA;
-}
-
-#seta_bttn {
-    width: 30px;
-    height: auto;
-    margin-right: 8px;
-}
-
-
- /* Corpo SITE FIM ---------------------------------------------------*/
 
 /* Torna o footer fixo ao fundo quando o conteúdo não preenche o viewport */
 html, body {
@@ -328,6 +254,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: auto;
 }
 
 #logo_footer {

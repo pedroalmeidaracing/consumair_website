@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CONSUM'AIR</title>
+        <link rel="icon" type="image/png" href="./resources/images/LOGO.png">
         <link rel="stylesheet" href="./resources/css/produto_uni.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,16 +25,37 @@
                 <li><a href="./downloads.html">Downloads</a></li>
             </ul>
 
-            <button id="contact_btt">Contacte-nos</button>
+            <a id="contact_btt" class="button" href="./contact.html">Contacte-nos</a>
         </header>
 
         <main>
             <ul class="sub_menu">
-                <li><a class="active_nav" href="./duo.html">DUO</a></li>
+                <li><a href="./duo.html">DUO</a></li>
                 <li><a href="./duo_plus.html">DUO PLUS</a></li>
                 <li><a href="./one.html">ONE</a></li>
-                <li><a href="./one_eco.html">ONE ECO</a></li>
+                <li><a class="active_nav" href="./one_eco.html">ONE ECO</a></li>
             </ul>
+
+            <div class="product_grid">
+                <a href="#" id="openModal"><img class="product_image" src="./resources/images/ONE-ECO-PAG-PRODUTO-01.webp" alt="ONE ECO VMC"></a>
+
+                <div class="product_info">
+                    <img id="product_logo" src="./resources/images/ONE-ECO-LOGO-01.svg" alt="ONE_ECO_title">
+                    <h3>SISTEMA DE SIMPLES FLUXO</h3>
+                    <p>O sistema de ventilação mecânica controlada de <strong>Simples Fluxo</strong> foi concebido para a extracção de ar viciado em locais húmidos (casas de banho, sanitários, cozinhas), com grelhas ligadas ao grupo de ventilação através de condutas. O ar é admitido no edifício através de grelhas ou aberturas de ventilação em ambientes secos (salas, quartos).</p><p>Sistemas de fluxo simples permitem que o requisito básico do HS3 seja cumprido.</p>
+                    <img id="product_drawing" src="./resources/images/ONE-ECO-DESENHO-01.svg" alt="desenho_ONE_ECO">
+                    <h3>caracteristicas:</h3>
+                    <img id="caracteristicas" src="./resources/images/ONE-ECO-CARACTERISTICAS-01-01.svg" alt="caracteristicas_ONE_ECO">
+                    <a id="download_bttn" href="./downloads.html">documentação</a>
+                </div>
+
+            </div>
+
+            <div id="produtos_bar" class="container">
+                <a href="./produtos.html" id="produtos_bttn"><svg id="seta_bttn" viewBox="0 0 47.93 47.93"><path d="M23.96,47.93c13.23,0,23.96-10.73,23.96-23.96S37.2,0,23.96,0,0,10.73,0,23.96s10.73,23.96,23.96,23.96ZM15.08,23.15l5.61-5.61c.48-.48,1.27-.48,1.75.02h.01c.46.49.46,1.26-.02,1.73l-3.5,3.5h13.67c.68,0,1.23.55,1.23,1.23h0c0,.68-.55,1.23-1.23,1.23h-13.67l3.5,3.5c.47.47.48,1.24.02,1.72h-.01c-.48.51-1.26.51-1.75.03l-5.61-5.61c-.48-.48-.48-1.26,0-1.73Z" fill="#fff"/></svg>Voltar á pagina de produtos</a>
+                <a id="bar" href="#"></a>
+            </div>
+
 
         </main>
 
@@ -48,5 +70,29 @@
                 <h4>Contacte-nos</h4>
                 <p>info@consumair.eu</p>
         </footer>
+
+                        <!-- Modal overlay -->
+                <div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center;">
+                    <span id="closeModal" style="position:absolute; top:30px; right:40px; color:#fff; font-size:2.5rem; cursor:pointer;">&times;</span>
+                    <img src="./resources/images/ONE-ECO-EXPLODE-01.webp" alt="DUO VMC" style="max-width:90vw; max-height:90vh; box-shadow:0 0 40px #000;">
+                </div>
+                    <script>
+                        document.getElementById('openModal').onclick = function(e) {
+                            e.preventDefault();
+                            document.getElementById('imageModal').style.display = 'flex';
+                            document.body.style.overflow = 'hidden';
+                        };
+                        document.getElementById('closeModal').onclick = function() {
+                            document.getElementById('imageModal').style.display = 'none';
+                            document.body.style.overflow = '';
+                        };
+                        document.getElementById('imageModal').onclick = function(e) {
+                            if (e.target === this) {
+                                this.style.display = 'none';
+                                document.body.style.overflow = '';
+                            }
+                        };
+                    </script>
+
     </body>
 </html>
