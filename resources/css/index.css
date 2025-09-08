@@ -60,7 +60,7 @@ p {
 
 .container {
     max-width: 1920px;
-    min-width: 1350px;
+    min-width: 1400px;
     margin: 0 auto;
 }
 
@@ -94,7 +94,7 @@ p {
 }
 
 .nav-menu li+li {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .nav-menu li a {
@@ -104,7 +104,7 @@ p {
     transition: background-color 0.2s ease;
     padding: 7px;
     display: inline-block;
-    width: 130px;
+    width: 120px;
 }
 
 .nav-menu li a:hover {
