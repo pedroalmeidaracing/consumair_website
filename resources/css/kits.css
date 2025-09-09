@@ -242,7 +242,7 @@ main {
 
 .banner {
     background-color: #4B18A1;
-    padding: 40px 120px;
+    padding: 60px 120px 40px 120px;
     margin-top: 40px;
     text-align: justify;
 }
@@ -263,7 +263,7 @@ main {
     width: 100%;
     height: auto;
     margin-bottom: 40px;
-    margin-top: -20px;
+    margin-top: 30px;
 }
 
 .banner_3 {
